@@ -1,66 +1,48 @@
-var homeBtn = document.querySelectorAll("nav .menu-btn a")[0];
-var featuresBtn = document.querySelectorAll("nav .menu-btn a")[1];
-var servicesBtn = document.querySelectorAll("nav .menu-btn a")[2];
-var aboutBtn = document.querySelectorAll("nav .menu-btn a")[3];
-var pricingBtn = document.querySelectorAll("nav .menu-btn a")[4];
-var teamBtn = document.querySelectorAll("nav .menu-btn a")[5];
-var contactBtn = document.querySelectorAll("nav .menu-btn a")[6];
+var homeBtn = $("nav .menu-btn a").eq(0);
+var featuresBtn = $("nav .menu-btn a").eq(1);
+var servicesBtn = $("nav .menu-btn a").eq(2);
+var aboutBtn = $("nav .menu-btn a").eq(3);
+var pricingBtn = $("nav .menu-btn a").eq(4);
+var teamBtn = $("nav .menu-btn a").eq(5);
+var contactBtn = $("nav .menu-btn a").eq(6);
 var html = document.querySelector("html");
+var sectionId = ["#header","#feature","#hosting","#about","#pricing","#team","#contact"];
 
-function changeActive(ActiveBtn){
-    homeBtn.classList.remove("active");
-    servicesBtn.classList.remove("active");
-    aboutBtn.classList.remove("active");
-    pricingBtn.classList.remove("active");
-    teamBtn.classList.remove("active");
-    contactBtn.classList.remove("active");
-    featuresBtn.classList.remove("active");
-    ActiveBtn.classList.add("active");
+function changeActive(btnName){
+    $("nav .menu-btn a").removeClass("active");
+    btnName.addClass("active");
 }
 
-homeBtn.addEventListener("click",function(){
-    changeActive(homeBtn);
-    html.scrollTo(0,0);
-})
-featuresBtn.addEventListener("click",function(){
-    changeActive(featuresBtn);
-    html.scrollTo(0,545);
-})
-servicesBtn.addEventListener("click",function(){
-    changeActive(servicesBtn);
-    html.scrollTo(0,1234);
-})
-aboutBtn.addEventListener("click",function(){
-    changeActive(aboutBtn);
-    html.scrollTo(0,1861);
-})
-pricingBtn.addEventListener("click",function(){
-    changeActive(pricingBtn);
-    html.scrollTo(0,2620);
-})
-teamBtn.addEventListener("click",function(){
-    changeActive(teamBtn);
-    html.scrollTo(0,4236);
-})
-contactBtn.addEventListener("click",function(){
-    changeActive(contactBtn);
-    html.scrollTo(0,5696);
+function scrolling(sectionName){
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(sectionName).offset().top
+    }, 1000);
+}
+
+$("nav .menu-btn a").click(function(){
+    var number = 6 - $(this).nextAll().length;
+    changeActive($(this));
+    scrolling(sectionId[number]);
 })
 
-window.addEventListener("scroll",function(){
-    if (html.scrollTop < 467) {
+$(".start-btn").click(function(){
+    scrolling(sectionId[1]);
+})
+
+$(window).scroll(function(){
+    if (html.scrollTop < $("#feature").offset().top - 10) {
         changeActive(homeBtn);
-    } else if (html.scrollTop < 1168) {
+    }else if (html.scrollTop < $("#hosting").offset().top - 10) {
         changeActive(featuresBtn);
-    }else if (html.scrollTop < 1779) {
+    }else if (html.scrollTop < $("#about").offset().top - 10) {
         changeActive(servicesBtn);
-    }else if (html.scrollTop < 2592) {
+    }else if (html.scrollTop < $("#pricing").offset().top - 10) {
         changeActive(aboutBtn);
-    }else if (html.scrollTop < 4140) {
+    }else if (html.scrollTop < $("#team").offset().top - 10) {
         changeActive(pricingBtn);
-    }else if (html.scrollTop < 5564) {
+    }else if (html.scrollTop < $("#contact").offset().top - 10) {
         changeActive(teamBtn);
-    }else if (html.scrollTop > 5564) {
+    }else if (html.scrollTop > $("#contact").offset().top - 10) {
         changeActive(contactBtn);
     }
 })
