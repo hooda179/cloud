@@ -5,27 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fav icon  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/3b0f3ba7c4.js" crossorigin="anonymous"></script>
+    <!-- bootstrap stylesheet  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- style sheet  -->
     <link rel="stylesheet" href="css/style.css">
     <title>Cloud</title>
 </head>
 <body>
     <!-- navigation bar -->
-    <nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="#" class="logo"><img src="images/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="menu-btn">
-            <a class="active" >Home</a>
-            <a>Features</a>
-            <a>Services</a>
-            <a>About</a>
-            <a>Pricing</a>
-            <a>Team</a>
-            <a>Contact</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">Home</li>
+            <li class="nav-item">Features</li>
+            <li class="nav-item">Services</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">Pricing</li>
+            <li class="nav-item">Team</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+        </div>
         </div>
     </nav>
     <!-- header section  -->
@@ -45,7 +56,9 @@
                <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="container">
-            <img src="images/features_img.png" alt="Features image">
+            <div class="image">
+                <img src="images/features_img.png" alt="Features image">
+            </div>
             <div class="flex-item">
                 <h2>We Make your life easy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam adipiscing elit. Praesent eget risus vitae massa.</p>
@@ -68,48 +81,48 @@
                <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="container">
-            <div class="container-item">
-                <div class="icon"><i class="fas fa-futbol"></i></div>
-                <div>
-                <h3>Hosting</h3>
-                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                <div class="container-item">
+                    <div class="icon"><i class="fas fa-futbol"></i></div>
+                    <div>
+                    <h3>Hosting</h3>
+                    <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container-item">
-                <div class="icon"><i class="far fa-compass"></i></div>
-                <div>
-                <h3>Special Hosting</h3>
-                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                <div class="container-item">
+                    <div class="icon"><i class="far fa-compass"></i></div>
+                    <div>
+                    <h3>Special Hosting</h3>
+                    <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container-item">
-                <div class="icon"><i class="fas fa-database"></i></div>
-                <div>
-                <h3>Web Builder</h3>
-                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum</p>
+                <div class="container-item">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <div>
+                    <h3>Web Builder</h3>
+                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container-item">
-                <div class="icon"><i class="fas fa-chart-bar"></i></div>
-                <div>
-                <h3>cPanel Access</h3>
-                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                <div class="container-item">
+                    <div class="icon"><i class="fas fa-chart-bar"></i></div>
+                    <div>
+                    <h3>cPanel Access</h3>
+                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container-item">
-                <div class="icon"><i class="far fa-paper-plane"></i></div>
-                <div>
-                <h3>Windows</h3>
-                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                <div class="container-item">
+                    <div class="icon"><i class="far fa-paper-plane"></i></div>
+                    <div>
+                    <h3>Windows</h3>
+                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container-item">
-                <div class="icon"><i class="fas fa-bullseye"></i></div>
-                <div>
-                <h3>MySQL</h3>
-                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                <div class="container-item">
+                    <div class="icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                    <h3>MySQL</h3>
+                    <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <!-- About us section  -->
@@ -120,7 +133,9 @@
                <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="container">
-            <img src="images/about.png" alt="About us">
+            <div>
+                <img src="images/about.png" alt="About us">
+            </div>
             <div>
                 <h2>Our Company</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
@@ -138,13 +153,13 @@
                <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="container">
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <h3>$45</h3>
                     <p>per month</p>
                     <h2>Basic</h2>
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <p><span>1</span> domain</p>
                     <p><span>100GB</span> DISK SPACE</p>
                     <p><span>UNLIMITED</span> BANDWIDTH</p>
@@ -154,13 +169,13 @@
                     <button class="learn-more-button">Get It Now!</button>
                 </div>
             </div>
-            <div class="card business">
-                <div class="card-header">
+            <div class="crd business">
+                <div class="crd-header">
                     <h3>$85</h3>
                     <p>per month</p>
                     <h2>BUSINESS</h2>
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <p><span>5</span> domain</p>
                     <p><span>500GB</span> DISK SPACE</p>
                     <p><span>UNLIMITED</span> BANDWIDTH</p>
@@ -170,13 +185,13 @@
                     <button class="learn-more-button">Get It Now!</button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <h3>$125</h3>
                     <p>per month</p>
                     <h2>PROFESSIONAL</h2>
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <p><span>10</span> domain</p>
                     <p><span>200GB</span> DISK SPACE</p>
                     <p><span>UNLIMITED</span> BANDWIDTH</p>
@@ -186,13 +201,13 @@
                     <button class="learn-more-button">Get It Now!</button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <h3>$185</h3>
                     <p>per month</p>
                     <h2>EXTENDED</h2>
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <p><span>15</span> domain</p>
                     <p><span>100GB</span> DISK SPACE</p>
                     <p><span>UNLIMITED</span> BANDWIDTH</p>
@@ -238,15 +253,15 @@
                <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="container">
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <img src="images/team/01.jpg" alt="John Deo">
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <h2>John Deo</h2>
                     <p>Founder</p>
                 </div>
-                <div class="card-footer">
+                <div class="crd-footer">
                     <div class="container social-container">
                         <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
@@ -255,15 +270,15 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <img src="images/team/02.jpg" alt="Mike Timobbs">
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <h2>Mike Timobbs</h2>
                     <p>President</p>
                 </div>
-                <div class="card-footer">
+                <div class="crd-footer">
                     <div class="container social-container">
                         <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
@@ -272,15 +287,15 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <img src="images/team/03.jpg" alt="Remo Silvaus">
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <h2>Remo Silvaus</h2>
                     <p>Architect</p>
                 </div>
-                <div class="card-footer">
+                <div class="crd-footer">
                     <div class="container social-container">
                         <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
@@ -289,15 +304,15 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <div class="crd">
+                <div class="crd-header">
                     <img src="images/team/04.jpg" alt="Niscal Deon">
                 </div>
-                <div class="card-body">
+                <div class="crd-body">
                     <h2>Niscal Deon</h2>
                     <p>Manager</p>
                 </div>
-                <div class="card-footer">
+                <div class="crd-footer">
                     <div class="container social-container">
                         <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="social"><a href="#"><i class="fab fa-twitter"></i></a></div>
@@ -385,6 +400,8 @@
     <footer>
             <p> &copy; 2021. Template by Mahmoud Abd Elaziz</p>
     </footer>
+    <!-- bootstrap script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- JQuery script  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- my script file -->

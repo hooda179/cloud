@@ -1,16 +1,18 @@
-var homeBtn = $("nav .menu-btn a").eq(0);
-var featuresBtn = $("nav .menu-btn a").eq(1);
-var servicesBtn = $("nav .menu-btn a").eq(2);
-var aboutBtn = $("nav .menu-btn a").eq(3);
-var pricingBtn = $("nav .menu-btn a").eq(4);
-var teamBtn = $("nav .menu-btn a").eq(5);
-var contactBtn = $("nav .menu-btn a").eq(6);
+var homeBtn = $("nav .menu-btn li").eq(0);
+var featuresBtn = $("nav .menu-btn li").eq(1);
+var servicesBtn = $("nav .menu-btn li").eq(2);
+var aboutBtn = $("nav .menu-btn li").eq(3);
+var pricingBtn = $("nav .menu-btn li").eq(4);
+var teamBtn = $("nav .menu-btn li").eq(5);
+var contactBtn = $("nav .menu-btn li").eq(6);
 var html = document.querySelector("html");
 var sectionId = ["#header","#feature","#hosting","#about","#pricing","#team","#contact"];
 
 function changeActive(btnName){
-    $("nav .menu-btn a").removeClass("active");
+    $("nav .menu-btn li").removeClass("active");
     btnName.addClass("active");
+    $(".navbar-toggler").removeClass("collapsed");
+    $(".navbar-collapse").removeClass("show");
 }
 
 function scrolling(sectionName){
@@ -19,7 +21,7 @@ function scrolling(sectionName){
     }, 1000);
 }
 
-$("nav .menu-btn a").click(function(){
+$("nav .menu-btn li").click(function(){
     var number = 6 - $(this).nextAll().length;
     changeActive($(this));
     scrolling(sectionId[number]);
