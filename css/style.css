@@ -256,6 +256,7 @@ header .start-btn:hover {
    }
    .about .container img {
        margin: -30px auto 60px;
+       width: 100%;
    }
    .about .container div h2 {
        text-align: center;
