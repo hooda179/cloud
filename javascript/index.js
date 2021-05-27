@@ -1,13 +1,15 @@
-var homeBtn = $("nav .menu-btn li").eq(0);
-var featuresBtn = $("nav .menu-btn li").eq(1);
-var servicesBtn = $("nav .menu-btn li").eq(2);
-var aboutBtn = $("nav .menu-btn li").eq(3);
-var pricingBtn = $("nav .menu-btn li").eq(4);
-var teamBtn = $("nav .menu-btn li").eq(5);
-var contactBtn = $("nav .menu-btn li").eq(6);
-var html = document.querySelector("html");
-var sectionId = ["#header","#feature","#hosting","#about","#pricing","#team","#contact"];
+document.addEventListener("DOMContentLoaded",function(){
+const homeBtn = $("nav .menu-btn li").eq(0);
+const featuresBtn = $("nav .menu-btn li").eq(1);
+const servicesBtn = $("nav .menu-btn li").eq(2);
+const aboutBtn = $("nav .menu-btn li").eq(3);
+const pricingBtn = $("nav .menu-btn li").eq(4);
+const teamBtn = $("nav .menu-btn li").eq(5);
+const contactBtn = $("nav .menu-btn li").eq(6);
+const html = document.querySelector("html");
+const sectionId = ["#header","#feature","#hosting","#about","#pricing","#team","#contact"];
 
+animateCSS('.head-title', 'fadeInUp');
 function changeActive(btnName){
     $("nav .menu-btn li").removeClass("active");
     btnName.addClass("active");
@@ -47,4 +49,30 @@ $(window).scroll(function(){
     }else if (html.scrollTop > $("#contact").offset().top - 10) {
         changeActive(contactBtn);
     }
+    
+if (html.scrollTop === 0){
+    animateCSS('.head-title', 'fadeInUp');
+}
 })
+    
+})
+
+// animation function 
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
