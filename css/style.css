@@ -110,7 +110,6 @@ header .head {
 header .head-title {
     font-size: 2.5rem;
     margin-bottom: 0;
-    animation-duration: 2s;
 }
 header .head-title span {
     color: var(--main-color);
@@ -425,8 +424,6 @@ footer p {
 @media screen and (max-width: 1300px){
     .pricing .container, .team .container.all  {
         flex-wrap: wrap;
-        padding-right: 162px;
-        padding-left: 160px;
     }
     .pricing .container .crd {
         width: calc(100%/3 -5px);
@@ -486,7 +483,6 @@ footer p {
     }
     .stats .container {
         flex-wrap: wrap;
-        padding: 0 151px;
     }
     .stats .container .outer {
         margin: auto;
@@ -499,4 +495,80 @@ footer p {
     .hosting-services .container .container-item {
         width: 100%;
     }
+}
+
+
+/*/////////////////////////////////////////// keyframes /////////////////////////////////////// */
+@keyframes down-to-top {
+    0%{
+        margin-bottom: -50px;
+        opacity: 0;
+    }
+    100%{
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes left-to-right {
+    0%{
+        margin-left: -100px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        margin-left: initial;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes right-to-left {
+    0%{
+        margin-right: -100px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        margin-right: initial;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes fadeInLeft {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInRight {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInDown {
+    0%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.down-to-top {
+    animation: down-to-top 1s ease-in-out forwards;
+}
+.left-to-right {
+    animation: left-to-right 1s ease-in-out forwards;
+}
+.right-to-left{
+    animation: right-to-left 1s ease-in-out forwards;
 }
